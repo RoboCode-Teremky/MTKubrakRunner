@@ -12,10 +12,10 @@ public class PlatformGenerator : MonoBehaviour
     {
         Random.InitState(LevelSeed.seed);
         ScoreCounter.allBonuses = 0;
-        Instantiate(platformPrefabs[Random.Range(0, platformPrefabs.Length - 1)],transform.position, Quaternion.identity);
-        Instantiate(platformPrefabs[Random.Range(0, platformPrefabs.Length - 1)], new Vector3(transform.position.x,transform.position.y,transform.position.z + 15), Quaternion.identity);
-        Instantiate(platformPrefabs[Random.Range(0, platformPrefabs.Length - 1)], new Vector3(transform.position.x,transform.position.y,transform.position.z + 30), Quaternion.identity);
-        Instantiate(platformPrefabs[Random.Range(0, platformPrefabs.Length - 1)], new Vector3(transform.position.x,transform.position.y,transform.position.z + 45), Quaternion.identity);
+        Instantiate(platformPrefabs[0],transform.position, Quaternion.identity);
+        Instantiate(platformPrefabs[0], new Vector3(transform.position.x,transform.position.y,transform.position.z + 15), Quaternion.identity);
+        Instantiate(platformPrefabs[0], new Vector3(transform.position.x,transform.position.y,transform.position.z + 30), Quaternion.identity);
+        Instantiate(platformPrefabs[0], new Vector3(transform.position.x,transform.position.y,transform.position.z + 45), Quaternion.identity);
         StartCoroutine(GeneratePlatform());
         initialGeneratorCooldown = generatorCooldown;
     }
